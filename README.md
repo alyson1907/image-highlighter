@@ -14,5 +14,5 @@ As an example of medical application, the program must be able to highlight the 
 Although the proper datasets are to be selected yet, the following images are good examples of what kind of input images the program should be able to handle:
 
 | Cerebral Angiography | Lateral Elbow Radiography |
-| --- | --- | --- |
+| --- | --- |
 |![](./demo/img/cerebral_angiography.jpg)|![](./demo/img/lateral_elbow.jpg)|
