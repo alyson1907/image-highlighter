@@ -4,18 +4,20 @@ import numpy as np
 from filters import smoothing_methods as sm
 from filters import edge_methods as em
 
-def edge_filter(img, selected=2):
+def edge_filter(img, n=4, sigma=1, selected=2):
     """
     Depending on the selected method, applies an Edge Filter to the image
-    1 - Laplace of Gaussian
+    1 - Laplacian of Gaussian
     2 - Sobel Operator
 
     Parameters:
         img: image to apply the filter
+        n: the size of the filter (used only by the `laplacian_of_gaussian` filter)
+        sigma: standard deviation (used only by the `laplacian_of_gaussian` filter)
         selected: number of the method
     """
     if(selected == 1):
-        return em.laplacian_of_gaussian(img, n=4, sigma=1)
+        return em.laplacian_of_gaussian(img, n, sigma)
 
     elif(selected == 2):
         return em.sobel_operator(img)
