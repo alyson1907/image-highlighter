@@ -79,6 +79,6 @@ The images below represent two types of processing applied to the same image fro
 
 Now applying the same filters to an image in our `demo/` folder (containing some random images from the internet):
 
-| Original Image | Gaussian Filter + LoG | Gaussian Filter + Sobel |
+| Original Image | Gaussian Filter + LoG | Gaussian Filter + Sobel (`scalar=1`) |
 | -- | -- | --|
 | <img src="./demo/img/cerebral_angiography.jpg" height="300" width="300"> | <img src="./demo/smoothing_results/cerebral_LoG.png" height="300" width="300"> | <img src="./demo/smoothing_results/cerebral_sobel.png" height="300" width="300"> |
