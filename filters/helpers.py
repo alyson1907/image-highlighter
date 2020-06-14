@@ -34,7 +34,7 @@ def normalize(img):
     img = img.astype(float)
     return (255 * (img - np.min(img)) / (np.max(img) - np.min(img))).astype(np.uint8)
 
-def printImg(img):
-  plt.rcParams['figure.figsize'] = [7, 7]
+def printImg(img, size=10):
+  plt.rcParams['figure.figsize'] = [size, size]
   plt.imshow(img, cmap="gray")
   plt.show()

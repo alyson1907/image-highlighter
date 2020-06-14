@@ -12,7 +12,7 @@ img = imageio.imread('demo/img/' + filename)
 # Handling third dimension of some images
 img = img[:, :, 0] if (len(np.shape(img)) == 3) else img
 
-# Applying sharpening filter
+# Applying filters to the image
 img_out = f.smoothing_filter(img, n=5, sigma=0.5, selected=2)
 img_out = f.edge_filter(img, selected=1)
 img_out = hp.normalize(img_out)

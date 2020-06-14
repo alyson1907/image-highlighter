@@ -35,8 +35,8 @@ def sobel_operator(img):
     img_out = np.zeros((img.shape[0] - 2, img.shape[1] - 2, 3))
     for y in range(1, img.shape[0] - 1):
         for x in range(1, img.shape[1] - 1):
-            gx = np.sum(np.multiply(img[y - 1:y + 2, x - 1:x + 2], fx))
-            gy = np.sum(np.multiply(img[y - 1:y + 2, x - 1:x + 2], fy))
+            gx = np.sum(np.multiply(img[y-1:y+2, x-1:x+2], fx))
+            gy = np.sum(np.multiply(img[y-1:y+2, x-1:x+2], fy))
             img_out[y - 1][x - 2] = np.sqrt(gx ** 2 + gy ** 2)
 
     return img_out
