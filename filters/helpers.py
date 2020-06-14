@@ -1,4 +1,6 @@
 # NOTE: This File contains general helper functions used in multiple files along the project
+
+import matplotlib.pyplot as plt
 import numpy as np
 
 def apply_filter_to_image(img, filter_matrix, n):
@@ -31,3 +33,8 @@ def normalize(img):
     """
     img = img.astype(float)
     return (255 * (img - np.min(img)) / (np.max(img) - np.min(img))).astype(np.uint8)
+
+def printImg(img):
+  plt.rcParams['figure.figsize'] = [7, 7]
+  plt.imshow(img, cmap="gray")
+  plt.show()

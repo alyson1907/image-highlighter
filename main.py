@@ -6,11 +6,6 @@ import numpy as np
 from filters import filter_appliers as f
 from filters import helpers as hp
 
-def printImg(img):
-  plt.rcParams['figure.figsize'] = [7, 7]
-  plt.imshow(img, cmap="gray")
-  plt.show()
-
 filename = 'cerebral_angiography.jpg' #str(input())
 img = imageio.imread('demo/img/' + filename)
 
