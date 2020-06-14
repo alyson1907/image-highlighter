@@ -3,7 +3,7 @@
 import numpy as np
 from filters import helpers as hp
 
-def laplace_of_gaussian(img, n=4, sigma=1):
+def laplacian_of_gaussian(img, n=4, sigma=1):
     """
     Applies Laplacian of Gaussian  filter to a grayscale image.
 
