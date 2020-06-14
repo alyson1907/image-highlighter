@@ -25,14 +25,14 @@ def median_filter(img, n):
 
     return img_out
 
-def gaussian_filter(img, n, w):
+def gaussian_filter(img, n, sigma):
     """
     Apply gaussian filter over given image
 
     Parameters:
         img: input image
         n: size of image
-        w: standard deviation
+        sigma: standard deviation
     """
     # Generating the gaussian filter matrix to apply to the image
     f = np.zeros((n,n), dtype=float)
@@ -40,8 +40,8 @@ def gaussian_filter(img, n, w):
     for i in np.arange(n):
         for j in np.arange(n):
             x = v[i]
-            y = v[-1-j]
-            f[i][j] = (1 / (2 * np.pi * w ** 2)) * np.exp(- ( x ** 2 + y ** 2) / (2 * w ** 2))
+            y = v[-1 - j]
+            f[i][j] = (1 / (2 * np.pi * sigma ** 2)) * np.exp(- ( x ** 2 + y ** 2) / (2 * sigma ** 2))
     f = f / np.sum(f)
 
     # Applying the filter to the image
