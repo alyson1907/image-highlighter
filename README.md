@@ -72,6 +72,7 @@ If you are running the Jupyter Notebook, the output image will be displayed in t
 
 ## Examples 
 The images below represent two types of processing applied to the same image from our dataset:
+
 | Original Image | Gaussian Filter + LoG | Gaussian Filter + Sobel |
 | -- | -- | --|
 | <img src="./images/Hand-XRay/2.png" height="300"> | <img src="./demo/smoothing_results/hand_LoG.png" height="300"> | <img src="./demo/smoothing_results/hand_sobel.png" height="300"> |
