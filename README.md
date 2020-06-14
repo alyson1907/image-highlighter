@@ -50,15 +50,15 @@ The selected datasets can be found in the following links:
 ### Step 1 - Image Enhancement
 The first step is to apply some Smoothing filter to the original image in order to reduce possible noises. This repository implements 2 filters of this type:
 
-1. Median Filter [read more](https://en.wikipedia.org/wiki/Median_filter)
-2. Gaussian Filter [read more](https://en.wikipedia.org/wiki/Gaussian_filter)
+1. Median Filter [(Read more)](https://en.wikipedia.org/wiki/Median_filter)
+2. Gaussian Filter [(Read more)](https://en.wikipedia.org/wiki/Gaussian_filter)
 
 ### Step 2 - Edge Detection
 After that, using the pre-processed image from the step before, in order to improve overall visibility of the image, we apply some Edge Detection filter.  
 The user can select one of the following:
 
-1. Laplacian of Gaussian [read more](https://homepages.inf.ed.ac.uk/rbf/HIPR2/log.htm)
-1. Sobel Operator [read more](https://en.wikipedia.org/wiki/Sobel_operator)
+1. Laplacian of Gaussian [(Read more)](https://homepages.inf.ed.ac.uk/rbf/HIPR2/log.htm)
+1. Sobel Operator [(Read more)](https://en.wikipedia.org/wiki/Sobel_operator)
 
 >**NOTE:** For the last one (Sobel Operator), the program will apply a default `scalar` value to the normalized output image in order to increase white pixels intensity. Feel free to set the scalar value to **1** to disable it and see the raw result from the Sobel filter
 
