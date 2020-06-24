@@ -6,6 +6,13 @@ Alyson Matheus Maruyama Nascimento - 8532269
 ## Project Description
 The main objective of this project is to implement a python code capable of processing grey-scaled images to improve its visibility. In order to achieve that, both **image restoration and colorizing filters** will be applied to the images so that the output images has an better overall visibility, highlighting their most important sections. 
 
+The program runs these steps before returning the output image:
+1. Applies a smoothing filter to the image, denoising it
+2. Applies edge detection filters
+3. Applies a colorizing filters (optional)
+
+All the filters applied are selected by the user, and all the filters available, for each step, are listed in [How it Works](#How-it-Works) section
+
 ## Application Area
 The program should be able to perform well with any grey-scaled image containing distinction of borders and objects to the human eye.  
 

@@ -7,7 +7,7 @@ from filters import filter_appliers as f
 from filters import helpers as hp
 
 # User inputs
-filename = str(input("Enter the image name "))
+filename = str(input("Enter the image name: "))
 img = imageio.imread('images/' + filename)
 selected_smoothing = int(input("Smoothing Filter number: "))
 selected_edge = int(input("Edge Filter number: "))
