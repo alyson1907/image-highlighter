@@ -11,7 +11,7 @@ The program runs these steps before returning the output image:
 2. Applies edge detection filters
 3. Applies a colorizing filters (optional)
 
-All the filters applied are selected by the user, and all the filters available, for each step, are listed in [How it Works](#How-it-Works) section
+All the filters applied are selected by the user, and all the filters available, for each step, are listed in [Available Filters](#Available-Filters) section
 
 ## Application Area
 The program should be able to perform well with any grey-scaled image containing distinction of borders and objects to the human eye.  
@@ -89,3 +89,6 @@ Now applying the same filters to an image in our `demo/` folder (containing some
 | Original Image | Gaussian Filter + LoG | Gaussian Filter + Sobel (`scalar=1`) |
 | -- | -- | --|
 | <img src="./demo/img/cerebral_angiography.jpg" height="300" width="300"> | <img src="./demo/smoothing_results/cerebral_LoG.png" height="300" width="300"> | <img src="./demo/smoothing_results/cerebral_sobel.png" height="300" width="300"> |
+
+# Final Report
+## Available Filters
