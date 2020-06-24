@@ -97,4 +97,5 @@ The following table lists all available filters for each step:
 |**Step**|**Filters**|
 |--|--|
 |**1. Smoothing**|1. Median Filter <br> 2. Gaussian Filter|
-|**2. Edge Detection** | 1. Laplacian of Gaussian <br> 2. Sobel Operator
+|**2. Edge Detection** | 1. Laplacian of Gaussian <br> 2. Sobel Operator|
+|**3. Colorizing**||
