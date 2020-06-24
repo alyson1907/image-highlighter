@@ -92,3 +92,9 @@ Now applying the same filters to an image in our `demo/` folder (containing some
 
 # Final Report
 ## Available Filters
+The following table lists all available filters for each step:
+
+|Step|Filters|
+|--|--|
+|1. Smoothing|1. Median Filter <br> 2. Gaussian Filter|
+|2. Edge Detection | 1. Laplacian of Gaussian <br> 2. Sobel Operator
