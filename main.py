@@ -24,17 +24,16 @@ img_out = f.edge_filter(img, n=3, sigma=1, selected=selected_edge)
 img_out = hp.normalize(img_out)
 
 # We apply the scalar if Sobel Operator is selected in order to turn white edges more visible
-scalar = 1
-img_out = (img_out * scalar) if (selected_edge == 2) else img_out
+scalar = 4
+img_out_restored = (img_out * scalar) if (selected_edge == 2) else img_out
 
 selected_color = int(input("ColorMap number: "))
-
 # Applying Color Filters
-img_out = color.colorize(img_out, selected=selected_color)
-img_out = hp.normalize(img_out)
+img_final = color.colorize(img_out_restored, selected=selected_color)
+img_final = hp.normalize(img_final)
 
-# img_out = color.change_contrast(img_out, k=0.025)
+# img_final = color.change_contrast(img_final, k=0.025)
 
 # Saving image
-img_out = img_out.astype(np.uint8)
-imageio.imwrite('out.png', img_out)
+img_final = img_final.astype(np.uint8)
+imageio.imwrite('out.png', img_final)
