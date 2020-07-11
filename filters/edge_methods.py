@@ -39,4 +39,4 @@ def sobel_operator(img):
             gy = np.sum(np.multiply(img[y-1:y+2, x-1:x+2], fy))
             img_out[y - 1][x - 2] = np.sqrt(gx ** 2 + gy ** 2)
 
-    return img_out[:, :, 0]
+    return hp.trim_dimension(img_out)
