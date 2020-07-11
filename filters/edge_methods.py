@@ -28,7 +28,6 @@ def sobel_operator(img):
 
     Parameters:
       img: image to apply the filter to
-      scalar: number to multiply the output image. The higher, the more intense will be the white lines
     """
     fx = np.array([[-1, 0, 1], [-2, 0, 2], [-1 ,0 ,1]])
     fy = np.array([[-1 ,-2, -1], [0 ,0 ,0], [1 ,2 ,1]])
@@ -40,4 +39,4 @@ def sobel_operator(img):
             gy = np.sum(np.multiply(img[y-1:y+2, x-1:x+2], fy))
             img_out[y - 1][x - 2] = np.sqrt(gx ** 2 + gy ** 2)
 
-    return img_out
+    return img_out[:, :, 0]
