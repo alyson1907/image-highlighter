@@ -3,6 +3,22 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+def trim_dimension(img):
+  """
+  Params:
+      img: image to be reshaped
+  """
+
+  shape = np.shape(img[:-1])
+
+  if (len(shape) == 3): 
+    return img[:, :, 0]
+
+  elif (len(shape) == 4):
+    return img[:, :, 0 , :]
+
+  return img
+
 def apply_filter_to_image(img, filter_matrix, n):
     """
     Applies the received filter to an image
@@ -36,5 +52,5 @@ def normalize(img):
 
 def printImg(img, size=10):
   plt.rcParams['figure.figsize'] = [size, size]
-  plt.imshow(img, cmap="gray")
+  plt.imshow(img)
   plt.show()
