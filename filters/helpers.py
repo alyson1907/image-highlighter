@@ -52,5 +52,5 @@ def normalize(img):
 
 def printImg(img, size=10):
   plt.rcParams['figure.figsize'] = [size, size]
-  plt.imshow(img)
+  plt.imshow(img, cmap="gray")
   plt.show()

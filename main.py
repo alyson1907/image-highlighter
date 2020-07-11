@@ -16,16 +16,17 @@ img = hp.trim_dimension(img)
 
 selected_smoothing = int(input("Smoothing Filter number: "))
 # Applying filter to the image
-img_out = f.smoothing_filter(img, n=5, sigma=0.5, selected=selected_smoothing)
+img_smooth = f.smoothing_filter(img, n=5, sigma=0.5, selected=selected_smoothing)
 
 selected_edge = int(input("Edge Filter number: "))
 # Applying filter to the image
-img_out = f.edge_filter(img, n=3, sigma=1, selected=selected_edge)
-img_out = hp.normalize(img_out)
+img_edge = f.edge_filter(img_smooth, n=3, sigma=1, selected=selected_edge)
+img_edge = hp.normalize(img_edge)
 
-# We apply the scalar if Sobel Operator is selected in order to turn white edges more visible
+# We apply the scalar if Sobel Operator is selected in order to turn white
+# edges more visible (scalar=1 will return the original output)
 scalar = 4
-img_out_restored = (img_out * scalar) if (selected_edge == 2) else img_out
+img_out_restored = (img_edge * scalar) if (selected_edge == 2) else img_edge
 
 selected_color = int(input("ColorMap number: "))
 # Applying Color Filters
