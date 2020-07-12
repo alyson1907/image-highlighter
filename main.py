@@ -53,4 +53,4 @@ img_final = hp.normalize(img_final)
 img_final = img_final.astype(np.uint8)
 imageio.imwrite('out.png', img_final)
 
-hp.printImg(img, img_out_restored, img_final, size=10)
+hp.printImg(img, img_smooth, img_final, size=12)

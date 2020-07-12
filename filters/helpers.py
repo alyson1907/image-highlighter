@@ -58,7 +58,6 @@ def printImg(*imgs, size=10):
   imgs: Array of images to be shown
   """
   if (len(imgs) == 1):
-
     plt.rcParams['figure.figsize'] = [size, size]
     plt.imshow(imgs[0], cmap="gray")
 
@@ -67,6 +66,6 @@ def printImg(*imgs, size=10):
     axs = axs.flatten()
 
     for img, ax in zip(imgs, axs):
-      ax.imshow(img)
+      ax.imshow(img, cmap="gray")
 
   plt.show()
