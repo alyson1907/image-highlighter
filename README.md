@@ -116,7 +116,7 @@ Now applying the same filters to an image in our `demo/` folder (containing some
 | <img src="./demo/img/cerebral_angiography.jpg" height="300"> | <img src="./demo/colorize_results/cerebral_inferno_LoG.png" height="300"> | <img src="./demo/colorize_results/cerebral_inferno_sobel.png" height="300"> |
 
 # Results
-The idea of the program is to provide **a set** of filters to be applied to a gray-scaled image. That being said, the program can be used to generate an image resulting of multiple combination of these filters. In this section I describe shortly the main failures and difficulties faced while developing the program.
+The idea of the program is to provide **a set** of filters to be applied to a gray-scaled image. That being said, the program can be used to generate an image resulting of multiple combination of these filters. In this section I describe shortly the main failures and difficulties, as well as the success cases faced while developing the program.
 
 ## Failures
 - **Sobel Operator performance**: the way the iterations of the Sobel filter is currently implemented is not optimal. This filter clearly takes longer to be applied than the other ones.
@@ -124,16 +124,24 @@ The idea of the program is to provide **a set** of filters to be applied to a gr
   
   - The above solution does not work perfectly, since each image has better results with different scalar values. This means the value must be manually adjusted for each image.
 
-  - Furthermore, for images with a certain amount a noise, when the scalar is applied the noise also stands out more, and the final image could be totaly ruined.
+  - Furthermore, for images with a certain amount a noise (even after denoising step), when the scalar is applied the noise also stands out more, and the final image could be totaly ruined.
 
-  |**Ruined Image (`scalar=5`)**| **Good Image (`scalar=5`)**|
+  |**Original/Ruined Image (`scalar=5`)**| **Original/Good Image (`scalar=5`)**|
   |--|--|
   |<img src="./demo/failure_results/sobel_raw_angiography.png" height="200">  <img src="./demo/failure_results/sobel_scalar5_angiography.png" height="200">|<img src="./demo/failure_results/sobel_raw_hand.png" height="200">  <img src="./demo/failure_results/sobel_scalar5_hand.png" height="200">|
 
   As we can see, the first image (*Cerebral Angyography*) was ruined when the scalar value was applied. Both the borders and the noise have their intensities increased, to the point where they mix up together. The same scalar value was applied to the second image (*Hand X-Ray*), but since this one does not contain much noise, it helps to improve the visibility when compared to the raw sobel filter output
 
-- **Colors too bright for some images**
+- **Colors too bright for some images**: depending on the image some specific colormaps are applied (e.g, Hot colormap), it can actually become more difficult to see the details of the image. The output image might have a lot of bright colors.
 
+  |**Original/Ruined Image (`scalar=5`)**|
+  |--|
+  |<img src="./images/Hand-XRay/1.png" height="300">  <img src="./demo/failure_results/LoG_hot_hand.png" height="300">|
 
+  Notice that in the output image above it is actually more difficult to distinguish the finger bones when compared to the original one.
 
+## Successes
+In general, the filters worked well when applied to the images from the selected datasets. Even though for specific cases they may not work too well (see **Failures** section above), since the program provides a set of filters, in most cases there are more than one combination of filters capable of improving image visibility.
+
+The Jupyter Notebook in this repository (`main.ipynb`) contains some examples of cases of success.
 
