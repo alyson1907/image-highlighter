@@ -1,6 +1,29 @@
 # Image Highlighter
 ## Author
 Alyson Matheus Maruyama Nascimento - 8532269
+**Presentation URL:** https://www.youtube.com/watch?v=v-VilwowRxI
+
+## Table of Contents
+- [Proposal](#proposal)
+  * [Project Description](#project-description)
+  * [Application Area](#application-area)
+  * [Example Images](#example-images)
+- [Partial Report](#partial-report)
+  * [Main Objective](#main-objective)
+  * [Datasets](#datasets)
+- [How it Works](#how-it-works)
+  * [Available Filters](#available-filters)
+    + [Step 1 - Image Enhancement](#step-1---image-enhancement)
+    + [Step 2 - Edge Detection](#step-2---edge-detection)
+    + [Step 3 - Normalizing](#step-3---normalizing)
+    + [Step 4 - Colorizing](#step-4---colorizing)
+    + [Step 5 - Showing the Results](#step-5---showing-the-results)
+- [Examples](#examples)
+  * [After Image Restoration](#after-image-restoration)
+  * [After Colorizing (Inferno colormap)](#after-colorizing-inferno-colormap)
+- [Results](#results)
+  * [Failures](#failures)
+  * [Successes](#successes)
 
 # Proposal
 ## Project Description
