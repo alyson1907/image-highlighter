@@ -50,7 +50,23 @@ def normalize(img):
     img = img.astype(float)
     return (255 * (img - np.min(img)) / (np.max(img) - np.min(img))).astype(np.uint8)
 
-def printImg(img, size=10):
-  plt.rcParams['figure.figsize'] = [size, size]
-  plt.imshow(img, cmap="gray")
+def printImg(*imgs, size=10):
+  """
+  Prints multiple images side by side.
+
+  Parameters:
+  imgs: Array of images to be shown
+  """
+  if (len(imgs) == 1):
+
+    plt.rcParams['figure.figsize'] = [size, size]
+    plt.imshow(imgs[0], cmap="gray")
+
+  else: 
+    _, axs = plt.subplots(1, len(imgs), figsize=(size, size))
+    axs = axs.flatten()
+
+    for img, ax in zip(imgs, axs):
+      ax.imshow(img)
+
   plt.show()
