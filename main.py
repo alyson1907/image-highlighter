@@ -25,7 +25,7 @@ img_edge = hp.normalize(img_edge)
 
 # We apply the scalar if Sobel Operator is selected in order to turn white
 # edges more visible (scalar=1 will return the original output)
-scalar = 4
+scalar = 2
 img_out_restored = (img_edge * scalar) if (selected_edge == 2) else img_edge
 
 selected_color = int(input("ColorMap number: "))
