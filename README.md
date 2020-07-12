@@ -1,6 +1,7 @@
 # Image Highlighter
 ## Author
 Alyson Matheus Maruyama Nascimento - 8532269
+
 **Presentation URL:** https://www.youtube.com/watch?v=v-VilwowRxI
 
 ## Table of Contents
