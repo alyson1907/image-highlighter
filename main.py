@@ -7,9 +7,23 @@ from filters import filter_appliers as f
 from filters import helpers as hp
 from filters import color_methods as color
 
+def read_folder_and_img():
+  folderAndFile = str(input("Enter the folder (1-Pneumonia / 2-Hand X-Rays) an image numbers (1 ~ 5): "))
+  folderNumber, fileNumber = folderAndFile.split(" ")
+
+  if (folderNumber == "1"):
+    folder = 'COVID-19-Pneumonia/'
+
+  elif (folderNumber == "2"):
+    folder = 'Hand-XRay/'
+  
+  else: raise ValueError('Invalid folder number')
+
+  return folder, fileNumber
+
 # User inputs
-filename = str(input("Enter the image name: "))
-img = imageio.imread('images/' + filename)
+folder, fileNumber = read_folder_and_img()
+img = imageio.imread('images/' + folder + fileNumber + '.png')
 
 # Handling third dimension of some Gray images
 img = hp.trim_dimension(img)
