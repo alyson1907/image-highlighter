@@ -120,7 +120,7 @@ The idea of the program is to provide **a set** of filters to be applied to a gr
 
 ## Failures
 - **Sobel Operator performance**: the way the iterations of the Sobel filter is currently implemented is not optimal. This filter clearly takes longer to be applied than the other ones.
-- **Scalar Ruins images with noise(sobel operator)**: when using the Sobel Operator, in most cases even though the algorithm is capable of detecting and highlighting the edges, they are not clearly visible. In order to improve visibility, a `scalar` (constant) is used to multiply the intensity of the pixels, standing out the borders.   
+- **Scalar Value(sobel operator)**: when using the Sobel Operator, in most cases even though the algorithm is capable of detecting and highlighting the edges, they are not clearly visible. In order to improve visibility, a `scalar` (constant) is used to multiply the intensity of the pixels, standing out the borders.   
   
   - The above solution does not work perfectly, since each image has better results with different scalar values. This means the value must be manually adjusted for each image.
 
